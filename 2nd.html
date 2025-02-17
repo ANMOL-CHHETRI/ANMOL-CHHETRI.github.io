@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmol Chhetri's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #555;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #000000;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .intro {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .project {
+            background: #fff;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 30%;
+        }
+        .project img {
+            width: 100%;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .imageone{
+            height: 50vh;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ANMOL CHHETRI</h1>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+    <section id="about" class="intro">
+        <img src="one.jpg" alt="" class="imageone">
+        <h2>About Me</h2>
+        <p>Hello! I'm Anmol Chhetri, currently studying BCA. I am passionate about web development and have experience in creating web applications using various technologies.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>A brief description of the project. Highlight the main features and technologies used.</p>
+        </div>
+        <div class="project">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>A brief description of the project. Highlight the main features and technologies used.</p>
+        </div>
+        <div class="project">
+            <img src="one.jpg" alt="Project 3">
+            <h3>Project 3</h3>
+            <p>A brief description of the project. Highlight the main features and technologies used.</p>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>Contact me at: anmol.chhetri@example.com</p>
+</footer>
+
+</body>
+</html>
