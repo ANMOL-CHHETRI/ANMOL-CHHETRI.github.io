@@ -17,12 +17,13 @@
             padding: 10px 0;
             text-align: center;
         }
-        nav {
+        nav{
             display: flex;
             justify-content: center;
             background: #555;
         }
         nav a {
+          
             color: #fff;
             padding: 14px 20px;
             text-decoration: none;
@@ -75,14 +76,14 @@
             width: 50%;
             height: 5vh;
             
-            background-color: rgb(255, 77, 0);
-            border: 2px solid blue;
-            border-radius: 50%;
+            /* background-color: white; */
+            /* border: 2px solid rgb(183, 231, 11); */
+            /* border-radius: 50%; */
         }
         .contact ul li{
             list-style-type: none;
             display: inline-table;
-            margin-right: 15vh;
+            margin-right: 14vh;
             height: 10vh;
             width: 9vh;
             align-items: center; 
@@ -90,22 +91,16 @@
         footer{
             width: 100%;
         }
-        .contact ul li:hover{
-            
-            background-color:blue;
-            overflow: hidden;
-            border: 2px solid rgb(240, 45, 11);
-            border-radius: 5%;
-        }
         .contact ul li a{
             color: white;
         }
         .clock{
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: white;
             position: absolute;
-            top: 13.5vh;
-            left: 5vh;
+            top: 1.5vh;
+            right: 1vh;
+            
 
         }
         .flag{
@@ -124,37 +119,88 @@
             0% { color: #ff0000; text-shadow: 0 0 5px #ee840a; }
             100% { color: #13a348; text-shadow: 0 0 5px #e0d20e;}
         }
+       
+/*media screen*/
+        @media screen and (max-width: 550px){
+            header{
+                font-size: 1.5vh;
+        }
+        nav {
+        font-size: 2vh;
+        }
+        footer .contactsimage{
+            height: 3vh;
+            width: 3vh;
+        }
+        footer .contact ul li{
+            font-size: 2vh;
+         
+        }
+        .clock{
+            font-size: 2vh;
+            position: absolute;
+            top: 8vh;
+            left: 18vh;
+            color: red;
+            
+        }
+        .contact ul li{
+            margin-right: 1vh;
+            padding: 1vh,1vh, 1vh, 1vh;
+        }
+        .project img {
+            width: 90%;
+            height: 10vh;
+        }
+        .project{
+            font-size: 2vh;
+        }
+        #about p{
+            font-size: 2vh;
+        }
+        #about img{
+            height: 20vh;
+        }
+        #about h1{
+            font-size: 3vh;
+        }
+
+        
+        .p{
+            font-size: 2vh;
+            color: rgb(172, 82, 82);
+        }
+        .line{
+            width: 2vh;
+            
+        }
+    }
 
     </style>
 </head>
 <body>
 
 <header>
-    <h1><marquee behavior="" direction="" bgcolor="red" scrollamount="9">Welcome to my portfolio! Here, I showcase my few projects and creative work,by reflecting my skills every piece. Enjoy exploring!</marquee></h1>
+    <h1><marquee behavior="" direction="" bgcolor="red" scrollamount="9">Welcome to my portfolio! Here, I showcase my few projects and creative work!</marquee></h1>
 </header>
 
 <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+   
 </nav>
-<div class="flag">
-    <img src="flag.jpg" alt="">
-</div>
 <div class="clock">
     <span id="date"></span>
     <span id="time"></span>
 </div>
-
-<div class="container">
     <section id="about" class="intro">
         <img src="one.jpg" alt="" class="imageone">
         <h1>Anmol Chhetri</h1>
         <p>Hello! I'm Anmol Chhetri, currently studying BCA. I am passionate about web development and have experience in creating web applications using various technologies.</p>
-    </section><hr>
-    <h1><center><u>Projects</u></center></h1>
-    <section id="projects" class="projects">
-        
+    </section><hr class="line">
+    <h1 class="p"><center><u>Projects</u></center></h1>
+    <section id="projects" class="projects">    
         <div class="project">
             <img src="html.webp" alt="Project 1">
             <h3>HTML</h3>
@@ -171,28 +217,33 @@
             <p>JavaScript (JS) is a versatile, high-level programming language commonly used to create interactive effects within web browsers.</p>
         </div>
         <div class="project">
-            <img src="gallery.png" alt="Project 4">
-            <h3>GALLERY</h3>
-            <p>A gallery is a place or space for displaying and showcasing visual art, such as paintings, sculptures, photographs, or other creative works</p>
+            <img src="java.webp" alt="Project 4">
+            <h3>java</h3>
+            <p>Java is a versatile and widely-used programming language that has been around since 1995.</p>
         </div>
         <div class="project">
-            <img src="thinking.webp" alt="Project 3">
-            <h3>Others</h3>
-            <p>related to the other field of interest</p>
+            <img src="c.jpeg" alt="Project 5">
+            <h3>C prorammig</h3>
+            <p>C is a procedural programming language, meaning it follows a sequence of steps to execute commands.</p>
+        </div>
+        <div class="project">
+            <img src="one.jpg" alt="Project 6">
+            <h3>Personal information</h3>
+            <p>related to the other field of interest</p><br>
+            <center><button>MORE</button></center>
         </div>
     </section>
-</div>
+
 
 <footer>
     <section id="contact" class="contact">
         <div class="contact">
             <ul>
-                <li><a href="#"><center><svg class="contactsimage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg></center><br>9748809637</a></li>
-                <li><a href="#"><center><svg xmlns="http://www.w3.org/2000/svg"class="contactsimage" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg></center><br>@XETTRI1044</a></li>
-                <li><a href="#"><center><svg xmlns="http://www.w3.org/2000/svg" class="contactsimage" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 32v128h128V32H0zm120 120H8V40h112v112zm40-120v128h128V32H160zm120 120H168V40h112v112zm40-120v128h128V32H320zm120 120H328V40h112v112zM0 192v128h128V192H0zm120 120H8V200h112v112zm40-120v128h128V192H160zm120 120H168V200h112v112zm40-120v128h128V192H320zm120 120H328V200h112v112zM0 352v128h128V352H0zm120 120H8V360h112v112zm40-120v128h128V352H160zm120 120H168V360h112v112zm40-120v128h128V352H320z"/></svg></center><br>canmol350@gmail.com</a></li>
-                <li><a href="https://www.facebook.com/share/19pPknmLG5/"><center><svg class="contactsimage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></center><br>AnmolXettri</a></li>
-                <li><a href="#"><center><svg xmlns="http://www.w3.org/2000/svg" class="contactsimage" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></center><br>9748809637</a></li>
-                <li><a href="#"><center><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="contactsimage"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg></center><br>@anmolchhetri7134</a></li>
+                <li><a href="#"><center><svg class="contactsimage" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke="#344054" d="M25 14.583A10.417 10.417 0 0 1 35.417 25m-12.5-18.625A17 17 0 0 1 25 6.25A18.75 18.75 0 0 1 43.75 25q0 1.045-.125 2.083"/><path stroke="#306cfe" d="M31.25 43.75a27.5 27.5 0 0 1-9.042-3.98L26 34.334a4.167 4.167 0 0 1 5.583-1.062c.688.437 1.396.833 2.084 1.229a4.167 4.167 0 0 1 1.75 5.875l-1.292 1.98a2.44 2.44 0 0 1-2.875 1.395M7.646 15.98l2.083-1.293a4.167 4.167 0 0 1 5.938 1.521c.396.75.791 1.459 1.229 2.084a4.167 4.167 0 0 1-1.063 5.583l-5.541 3.854A27.5 27.5 0 0 1 6.25 18.75a2.44 2.44 0 0 1 1.396-2.77"/><path stroke="#306cfe" d="M10.292 27.73a37 37 0 0 0 5.375 6.603a37 37 0 0 0 6.604 5.375"/></g></svg></center><br>9748809637</a></li>
+                <li><a href="#"><center><svg  class="contactsimage" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><g fill="none"><rect width="256" height="256" fill="url(#skillIconsInstagram0)" rx="60"/><rect width="256" height="256" fill="url(#skillIconsInstagram1)" rx="60"/><path fill="#fff" d="M128.009 28c-27.158 0-30.567.119-41.233.604c-10.646.488-17.913 2.173-24.271 4.646c-6.578 2.554-12.157 5.971-17.715 11.531c-5.563 5.559-8.98 11.138-11.542 17.713c-2.48 6.36-4.167 13.63-4.646 24.271c-.477 10.667-.602 14.077-.602 41.236s.12 30.557.604 41.223c.49 10.646 2.175 17.913 4.646 24.271c2.556 6.578 5.973 12.157 11.533 17.715c5.557 5.563 11.136 8.988 17.709 11.542c6.363 2.473 13.631 4.158 24.275 4.646c10.667.485 14.073.604 41.23.604c27.161 0 30.559-.119 41.225-.604c10.646-.488 17.921-2.173 24.284-4.646c6.575-2.554 12.146-5.979 17.702-11.542c5.563-5.558 8.979-11.137 11.542-17.712c2.458-6.361 4.146-13.63 4.646-24.272c.479-10.666.604-14.066.604-41.225s-.125-30.567-.604-41.234c-.5-10.646-2.188-17.912-4.646-24.27c-2.563-6.578-5.979-12.157-11.542-17.716c-5.562-5.562-11.125-8.979-17.708-11.53c-6.375-2.474-13.646-4.16-24.292-4.647c-10.667-.485-14.063-.604-41.23-.604zm-8.971 18.021c2.663-.004 5.634 0 8.971 0c26.701 0 29.865.096 40.409.575c9.75.446 15.042 2.075 18.567 3.444c4.667 1.812 7.994 3.979 11.492 7.48c3.5 3.5 5.666 6.833 7.483 11.5c1.369 3.52 3 8.812 3.444 18.562c.479 10.542.583 13.708.583 40.396s-.104 29.855-.583 40.396c-.446 9.75-2.075 15.042-3.444 18.563c-1.812 4.667-3.983 7.99-7.483 11.488c-3.5 3.5-6.823 5.666-11.492 7.479c-3.521 1.375-8.817 3-18.567 3.446c-10.542.479-13.708.583-40.409.583c-26.702 0-29.867-.104-40.408-.583c-9.75-.45-15.042-2.079-18.57-3.448c-4.666-1.813-8-3.979-11.5-7.479s-5.666-6.825-7.483-11.494c-1.369-3.521-3-8.813-3.444-18.563c-.479-10.542-.575-13.708-.575-40.413s.096-29.854.575-40.396c.446-9.75 2.075-15.042 3.444-18.567c1.813-4.667 3.983-8 7.484-11.5s6.833-5.667 11.5-7.483c3.525-1.375 8.819-3 18.569-3.448c9.225-.417 12.8-.542 31.437-.563zm62.351 16.604c-6.625 0-12 5.37-12 11.996c0 6.625 5.375 12 12 12s12-5.375 12-12s-5.375-12-12-12zm-53.38 14.021c-28.36 0-51.354 22.994-51.354 51.355s22.994 51.344 51.354 51.344c28.361 0 51.347-22.983 51.347-51.344c0-28.36-22.988-51.355-51.349-51.355zm0 18.021c18.409 0 33.334 14.923 33.334 33.334c0 18.409-14.925 33.334-33.334 33.334s-33.333-14.925-33.333-33.334c0-18.411 14.923-33.334 33.333-33.334"/><defs><radialGradient id="skillIconsInstagram0" cx="0" cy="0" r="1" gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)" gradientUnits="userSpaceOnUse"><stop stop-color="#fd5"/><stop offset=".1" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></radialGradient><radialGradient id="skillIconsInstagram1" cx="0" cy="0" r="1" gradientTransform="matrix(22.25952 111.2061 -458.39518 91.75449 -42.881 18.441)" gradientUnits="userSpaceOnUse"><stop stop-color="#3771c8"/><stop offset=".128" stop-color="#3771c8"/><stop offset="1" stop-color="#60f" stop-opacity="0"/></radialGradient></defs></g></svg></center></a></li>
+                <li><a href="#"><center><svg  class="contactsimage" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><g fill="#fcc21b" fill-rule="evenodd" clip-rule="evenodd"><path d="M14.85 49.05v51.42h98.3V49.05L64 73.49z"/><path d="M14.85 27.53V41.2L64 65.63l49.15-24.43V27.53z"/></g><path fill="#fcc21b" d="M64.02 38.78c15.6 0 26.11 10.46 26.21 26.05c.01.13.01.31.02.52c.01 1.28-.21 3.89-1.69 6.42c-.13.24-.26.48-.42.71c-1.63 2.34-4.78 3.86-8.05 3.87h-.02c-3.1 0-5.94-1.27-7.84-3.48c-2.24 2.69-5.67 4.44-10.06 4.45h-.04c-4.94 0-8.73-2.16-10.9-5.45c-1.21-1.84-1.91-4.04-2.03-6.41a8 8 0 0 1-.03-.7c-.02-6.95 4.96-12.6 12.95-12.62h.02c2.56 0 4.77.62 6.65 1.64v-.69c0-.3.24-.55.55-.55l6.62-.02c.3 0 .55.24.55.55l.03 8.83h.04c.03.93.21 2.27.53 3.48c.25.97.6 1.86 1.03 2.38c.55.65 1.42.76 1.91.76h.03c.85 0 1.52-.37 1.66-.52c.63-.9.73-2.15.71-2.63v-.08l-.01-.31c-.02-8.89-4.86-18.38-18.39-18.38h-.07c-10.84.02-18.4 7.34-18.37 17.8c0 .36.03.71.05 1.06c.12 2.33.62 4.48 1.45 6.41C49.8 78.14 56 82.11 63.99 82.11h.05c4.47-.01 8.48-1.24 11.6-3.55l4.66 6.28c-4.47 3.31-10.08 5.07-16.24 5.08h-.08c-12.46 0-22.11-7.25-25.17-18.03c-.58-2.02-.9-4.17-.99-6.41c-.01-.35-.05-.7-.05-1.06c-.03-14.81 10.97-25.6 26.17-25.63c.02-.01.05-.01.08-.01m-1.9 31.76h.02c3.42-.01 5.62-2.25 5.93-5.14c.03-.23.06-.46.06-.7c-.01-3.2-2.32-5.81-6.01-5.81h-.02c-3.69.01-5.99 2.63-5.98 5.84c0 .24.04.47.07.7c.32 2.88 2.52 5.11 5.93 5.11m1.9-37.09h-.1c-8.74.02-16.74 3.14-22.51 8.8c-5.81 5.69-8.99 13.57-8.98 22.18c0 .33.02.66.04.99l.02.25c.11 2.71.5 5.28 1.19 7.69c3.79 13.31 15.68 21.91 30.3 21.91c7.4-.01 14.1-2.13 19.49-6.13a5.337 5.337 0 0 0 1.11-7.46l-.39-.52c3.42-.9 6.43-2.89 8.33-5.62c.24-.35.45-.71.65-1.07c2.12-3.63 2.42-7.28 2.41-9.14c0-.26-.01-.47-.02-.63c-.18-18.42-13.13-31.25-31.54-31.25"/><path fill="#ed6c30" fill-rule="evenodd" d="M90.23 64.83c-.1-15.62-10.65-26.09-26.29-26.05c-15.2.03-26.2 10.82-26.17 25.63c0 .36.04.71.05 1.06c.09 2.25.41 4.39.99 6.41c3.08 10.81 12.75 18.06 25.25 18.03c6.15-.01 11.77-1.77 16.24-5.08l-4.66-6.28c-3.11 2.31-7.13 3.53-11.6 3.55c-8.01.02-14.23-3.96-16.96-10.24c-.83-1.93-1.33-4.09-1.45-6.41c-.02-.35-.05-.7-.05-1.06c-.02-10.46 7.53-17.77 18.37-17.8c13.58-.03 18.44 9.48 18.46 18.38l.01.31v.08c.02.48-.08 1.73-.71 2.63c-.14.15-.81.52-1.66.52c-.48 0-1.38-.1-1.94-.76c-.44-.52-.78-1.42-1.03-2.38c-.32-1.21-.51-2.55-.53-3.48h-.04l-.03-8.83c0-.3-.25-.55-.55-.55l-6.62.02c-.3 0-.55.25-.55.55v.69c-1.88-1.02-4.1-1.65-6.67-1.64c-7.98.02-12.96 5.67-12.95 12.62c0 .24.02.47.03.7c.12 2.38.82 4.57 2.03 6.41c2.18 3.3 5.98 5.47 10.94 5.45c4.39-.01 7.82-1.76 10.06-4.45c1.9 2.21 4.75 3.49 7.86 3.48c3.27-.01 6.42-1.52 8.05-3.87c.16-.23.29-.47.42-.71c1.48-2.53 1.7-5.15 1.69-6.42c.02-.2.01-.38.01-.51m-22.16.57c-.31 2.89-2.51 5.13-5.93 5.14s-5.63-2.23-5.95-5.11c-.03-.23-.07-.46-.07-.7c-.01-3.21 2.3-5.83 5.98-5.84c3.7-.01 6.02 2.6 6.03 5.81c0 .24-.04.47-.06.7" clip-rule="evenodd"/></svg></center></a></li>
+                <li><a href="#"><center><svg class="contactsimage" xmlns="http://www.w3.org/2000/svg" width="256" height="258" viewBox="0 0 256 258"><defs><linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1faf38"/><stop offset="100%" stop-color="#60d669"/></linearGradient><linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#f9f9f9"/><stop offset="100%" stop-color="#fff"/></linearGradient></defs><path fill="url(#logosWhatsappIcon0)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"/><path fill="url(#logosWhatsappIcon1)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"/><path fill="#fff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"/></svg></center></a></li>
+                <li><a href="#"><center><svg class="contactsimage" xmlns="http://www.w3.org/2000/svg" width="256" height="180" viewBox="0 0 256 180"><path fill="#f00" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></svg></center></a></li>
 
 
             </ul>
@@ -204,7 +255,7 @@
 <script>
     //date and time ko lagi matra use gara ko hai
     function updateTime() {
-        let now = new Date();
+       let now = new Date();
         let date = now.toLocaleDateString();
         let time = now.toLocaleTimeString();
         document.getElementById('date').textContent = date;
